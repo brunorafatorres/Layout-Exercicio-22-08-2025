@@ -11,37 +11,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Exemplo de Layout',
       home: Scaffold(
         appBar: AppBar(
           title: Text("Exemplo de Layout"),
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.blue[700],
+          foregroundColor: Colors.white,
         ),
-        body: Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-            color: Colors.amber[100],
-            borderRadius: BorderRadius.all(Radius.circular(50)),
-          ),
-          margin: EdgeInsets.all(30),
-          padding: EdgeInsets.all(50),
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Conteúdo",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+        body: Column(
+          children: [
+            Text("Bem-vindo ao exemplo", style: TextStyle(fontSize: 30)),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.purple, width: 3),
+                borderRadius: BorderRadius.circular(20),
               ),
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          elevation: 20,
-          onPressed: () {
-            print("ok");
-          },
-          child: Icon(Icons.add_circle),
+              child: Text("Exemplo", style: TextStyle(fontSize: 40)),
+            ),
+          ],
         ),
       ),
     );
